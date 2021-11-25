@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Systan 4</title>
+    <script src="main.js"></script>
+</head>
+<body>
+<style>
+    input{
+        width: 7ch;
+        font: small-caps bold 17px/1 sans-serif;
+    }
+    body{
+        font: small-caps bold 17px/1 sans-serif;
+    }
+    .link{
+        position: fixed;
+        top: 100px;
+        left: 100px;
+        height: 30px;
+        width: 30px;
+        border-radius: 15px;
+        background-color: gray;
+    }
+</style>
+    <center>
+        <table>
+            <tr>
+                <td>G1</td>
+                <td>G2</td>
+                <td>G3</td>
+                <td>G4</td>
+            </tr>
+            <tr>
+                <td><input type="text" id="I1" value="10"></td>
+                <td><input type="text" id="I2" value="15"></td>
+                <td><input type="text" id="I3" value="70"></td>
+                <td><input type="text" id="I4" value="95"></td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td></td>
+                <td>G1</td>
+                <td>G2</td>
+                <td>G3</td>
+                <td>G4</td>
+                <td>Vi</td>
+                <td>Pi</td>
+            </tr>
+            <tr>
+                <td>G1</td>
+                <td><input type="text" id="G1G1" value=""></td>
+                <td><input type="text" id="G1G2" value=""></td>
+                <td><input type="text" id="G1G3" value=""></td>
+                <td><input type="text" id="G1G4" value=""></td>
+                <td><input type="text" class="immutable" id="G1Vi" readonly></td>
+                <td><input type="text" class="immutable" id="G1Pi" readonly></td>
+            </tr>
+            <tr>
+                <td>G2</td>
+                <td><input type="text" id="G2G1" value=""></td>
+                <td><input type="text" id="G2G2" value=""></td>
+                <td><input type="text" id="G2G3" value=""></td>
+                <td><input type="text" id="G2G4" value=""></td>
+                <td><input type="text" class="immutable" id="G2Vi" readonly></td>
+                <td><input type="text" class="immutable" id="G2Pi" readonly></td>
+            </tr>
+            <tr>
+                <td>G3</td>
+                <td><input type="text" id="G3G1" value=""></td>
+                <td><input type="text" id="G3G2" value=""></td>
+                <td><input type="text" id="G3G3" value=""></td>
+                <td><input type="text" id="G3G4" value=""></td>
+                <td><input type="text" class="immutable" id="G3Vi" readonly></td>
+                <td><input type="text" class="immutable" id="G3Pi" readonly></td>
+            </tr>
+            <tr>
+                <td>G4</td>
+                <td><input type="text" id="G4G1" value=""></td>
+                <td><input type="text" id="G4G2" value=""></td>
+                <td><input type="text" id="G4G3" value=""></td>
+                <td><input type="text" id="G4G4" value=""></td>
+                <td><input type="text" class="immutable" id="G4Vi" readonly></td>
+                <td><input type="text" class="immutable" id="G4Pi" readonly></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><input type="text" class="immutable" id="Vi" readonly></td>
+                <td></td>
+            </tr>
+        </table>
+        <br><br><br>
+        <table>
+            <tr>
+                <td></td>
+                <td>G1</td>
+                <td>G2</td>
+                <td>G3</td>
+                <td>G4</td>
+            </tr>
+            <tr>
+                <td>En1</td>
+                <td id="SG11"></td>
+                <td id="SG12"></td>
+                <td id="SG13"></td>
+                <td id="SG14"></td>
+            </tr>
+            <tr>
+                <td>En2</td>
+                <td id="SG21"></td>
+                <td id="SG22"></td>
+                <td id="SG23"></td>
+                <td id="SG24"></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+                <td>max</td>
+                <td id="max"></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+                <td>UI</td>
+                <td id="ui"></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+                <td>WI</td>
+                <td id="wi"></td>
+            </tr>
+            <tr><td></td></tr>
+            <tr>
+                <td>WU</td>
+                <td id="wu"></td>
+            </tr>
+        </table>
+        <br><br><br>
+        <button onclick="main()">Обрахувати</button>
+    </center>
+</body>
+</html>
