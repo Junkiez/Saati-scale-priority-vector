@@ -8,6 +8,14 @@ function main() {
         }
         data.push(row);
     }
+    if(data[4][4]==""){
+        for(var i=0; i<4; i++) {
+            for(var j=0; j<i-1; j++){
+                data[j][i] = 1/data[j][i];
+                document.getElementById("G"+(i+1)+"G"+(j+1)).value = data[j][i];
+        }
+    }
+    }
     var ViArr = [];
     var PiArr = [];
     var Vi;
