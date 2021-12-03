@@ -3,16 +3,27 @@ function main() {
     for(var i=1; i<=4; i++) {
         var row = [];
         for(var j=1; j<=4; j++){
-            let v = document.getElementById("G"+i+"G"+j).value;
+            if(document.getElementById("G"+i+"G"+j).value == ""){
+                row.push("");
+                continue;
+            }
+            let v = document.getElementById("G"+i+"G"+j).value.split('/');
+            if(i==j){
+                row.push(1);
+                continue;
+            }
+            v = v[0]/v[1];
+            document.getElementById("G"+i+"G"+j).value = v;
             row.push(v);
         }
         data.push(row);
     }
-    if(data[4][4]==""){
-        for(var i=0; i<4; i++) {
-            for(var j=0; j<i-1; j++){
-                data[j][i] = 1/data[j][i];
-                document.getElementById("G"+(i+1)+"G"+(j+1)).value = data[j][i];
+
+    if(data[3][0]==""){
+        for(var i=1; i<4; i++) {
+            for(var j=0; j<i; j++){
+                document.getElementById("G"+(i+1)+"G"+(j+1)).value = (1/data[j][i]);
+                data[i][j] = (1/data[j][i]);
         }
     }
     }
