@@ -1,31 +1,22 @@
 function main() {
+    var I1 = document.getElementById("I1").value;
+    var I2 = document.getElementById("I2").value;
+    var I3 = document.getElementById("I3").value;
+    var I4 = document.getElementById("I4").value;
+    for(var i=1; i<=4; i++) {
+        for(var j=1; j<=4; j++){
+            document.getElementById("G"+i+"G"+j).value = document.getElementById("I"+i).value / document.getElementById("I"+j).value;
+        }
+    }
+
     var data = [];
     for(var i=1; i<=4; i++) {
         var row = [];
         for(var j=1; j<=4; j++){
-            if(document.getElementById("G"+i+"G"+j).value == ""){
-                row.push("");
-                continue;
-            }
-            let v = document.getElementById("G"+i+"G"+j).value.split('/');
-            if(i==j){
-                row.push(1);
-                continue;
-            }
-            v = v[0]/v[1];
-            document.getElementById("G"+i+"G"+j).value = v;
+            let v = document.getElementById("G"+i+"G"+j).value;
             row.push(v);
         }
         data.push(row);
-    }
-
-    if(data[3][0]==""){
-        for(var i=1; i<4; i++) {
-            for(var j=0; j<i; j++){
-                document.getElementById("G"+(i+1)+"G"+(j+1)).value = (1/data[j][i]);
-                data[i][j] = (1/data[j][i]);
-        }
-    }
     }
     var ViArr = [];
     var PiArr = [];
